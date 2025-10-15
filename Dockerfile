@@ -13,7 +13,7 @@ RUN printf "I'm building for TARGETPLATFORM=${TARGETPLATFORM}" \
     && printf "and  uname -m : " && uname -m
 #install required packages
 RUN apt update \
-    && apt install -y curl wget unzip gpg git nodejs
+    && apt install -y curl wget unzip gpg git nodejs moreutils
 # install helm
 RUN wget -O helm.tar.gz https://get.helm.sh/helm-v3.18.6-linux-${TARGETARCH}.tar.gz \
     && tar -xvzf helm.tar.gz \
